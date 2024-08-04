@@ -201,6 +201,64 @@ main {
 main .category {
   margin: 120px auto 80px;
 }
+main .category .inputData {
+  margin: 50px auto 0;
+  width: 1080px;
+  height: 74px;
+  background-color: #F6F7F8;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+main .category .inputData .profile {
+  width: 39px;
+  height: 44px;
+  background-color: #33C2D7;
+  position: relative;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+main .category .inputData .profile::after {
+  content: "";
+  width: 37px;
+  height: 42px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+main .category .inputData .profile img {
+  width: 34.13px;
+  height: 39.13px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 99;
+  transform: translate(-50%, -50%);
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+main .category .inputData .data {
+  font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #0D2639;
+}
+main .category .inputData .data em {
+  font-style: normal;
+  font-weight: 700;
+}
+main .category .inputData .data span {
+  color: #EA2458;
+  font-weight: 800;
+}
 main .competition {
   width: 1080px;
   margin: 0 auto 120px;
@@ -244,11 +302,11 @@ main .competition .competitionNav_wrapper .show::after {
   left: 50%;
   transform: translateX(-50%);
 }
-main .competition .youyuber_wrapper {
+main .competition .youtuber_wrapper {
   display: flex;
   gap: 20px;
 }
-main .competition .youyuber_wrapper .youyuber_item {
+main .competition .youtuber_wrapper .youyuber_item {
   width: 138px;
   height: 174px;
   border: 1px solid #EEEFF1;
@@ -258,7 +316,7 @@ main .competition .youyuber_wrapper .youyuber_item {
   padding: 20px 0;
   box-sizing: border-box;
 }
-main .competition .youyuber_wrapper .youyuber_item .percent {
+main .competition .youtuber_wrapper .youyuber_item .percent {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -269,13 +327,13 @@ main .competition .youyuber_wrapper .youyuber_item .percent {
   right: -6px;
   top: -8px;
 }
-main .competition .youyuber_wrapper .youyuber_item .percent p {
+main .competition .youtuber_wrapper .youyuber_item .percent p {
   color: #fff;
   font-family: "Noto Sans KR", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 11px;
   font-weight: 500;
 }
-main .competition .youyuber_wrapper .youyuber_item .percent p em {
+main .competition .youtuber_wrapper .youyuber_item .percent p em {
   padding-top: 2px;
   font-style: normal;
   font-size: 13px;
@@ -283,17 +341,48 @@ main .competition .youyuber_wrapper .youyuber_item .percent p em {
   display: block;
   line-height: 0.7;
 }
-main .competition .youyuber_wrapper .youyuber_item .profile {
-  margin-bottom: 10px;
+main .competition .youtuber_wrapper .youyuber_item .profile {
+  margin: 0 auto 10px;
+  width: 72px;
+  height: 80px;
+  background-color: #33C2D7;
+  position: relative;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
-main .competition .youyuber_wrapper .youyuber_item .name {
+main .competition .youtuber_wrapper .youyuber_item .profile::after {
+  content: "";
+  width: 70px;
+  height: 78px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+main .competition .youtuber_wrapper .youyuber_item .profile img {
+  width: 62px;
+  height: 70px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 99;
+  transform: translate(-50%, -50%);
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+main .competition .youtuber_wrapper .youyuber_item .name {
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 14px;
   font-weight: 500;
   color: #3F4244;
   margin-bottom: 8px;
 }
-main .competition .youyuber_wrapper .youyuber_item .subscriberCount {
+main .competition .youtuber_wrapper .youyuber_item .subscriberCount {
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 13px;
   font-weight: 500;
@@ -323,8 +412,10 @@ main .comparison .chart_wrapper {
 }
 main .comparison .chart_wrapper .chart_item {
   padding: 20px;
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
   border: 1px solid #EEEFF1;
   border-radius: 3px;
   box-shadow: 0 3px 12px rgba(149, 166, 182, 0.11);
