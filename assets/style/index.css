@@ -219,6 +219,12 @@ main .category.active .youtuberList_container .youtuberList_wrapper {
   margin: 0 auto;
 }
 main .category.active .youtuberList_container .youtuberList_wrapper .currentProfile_container {
+  position: relative;
+}
+main .category.active .youtuberList_container .youtuberList_wrapper .currentProfile_container:hover .profileChange_wrapper {
+  display: flex;
+}
+main .category.active .youtuberList_container .youtuberList_wrapper .currentProfile_container .currentProfile {
   width: 120px;
   height: 134px;
   background-color: #F8F9FC;
@@ -228,9 +234,9 @@ main .category.active .youtuberList_container .youtuberList_wrapper .currentProf
   place-items: center;
   padding: 12px;
   box-sizing: border-box;
-}
-main .category.active .youtuberList_container .youtuberList_wrapper .currentProfile_container .currentProfile {
   position: relative;
+  top: 0;
+  left: 0;
 }
 main .category.active .youtuberList_container .youtuberList_wrapper .currentProfile_container .currentProfile .profile {
   width: 70px;
@@ -267,8 +273,8 @@ main .category.active .youtuberList_container .youtuberList_wrapper .currentProf
 }
 main .category.active .youtuberList_container .youtuberList_wrapper .currentProfile_container .currentProfile .icon {
   position: absolute;
-  right: 0;
-  bottom: 22px;
+  right: 22px;
+  bottom: 35px;
   width: 28px;
   height: 28px;
   border-radius: 50%;
@@ -285,7 +291,77 @@ main .category.active .youtuberList_container .youtuberList_wrapper .currentProf
   margin-top: 5px;
 }
 main .category.active .youtuberList_container .youtuberList_wrapper .currentProfile_container .profileChange_wrapper {
+  transition: 0.3s;
+  position: absolute;
+  z-index: 999;
+  bottom: -90px;
+  right: -210px;
   display: none;
+  justify-content: center;
+  gap: 15px;
+  width: 254px;
+  height: 112px;
+  padding: 12px 0;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-color: #fff;
+  border: 1px solid #F6F6F6;
+  box-shadow: 0 3px 10px rgba(68, 69, 71, 0.12);
+}
+main .category.active .youtuberList_container .youtuberList_wrapper .currentProfile_container .profileChange_wrapper .profileChange_item {
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+main .category.active .youtuberList_container .youtuberList_wrapper .currentProfile_container .profileChange_wrapper .profileChange_item.click .profile {
+  background-color: #EA2458;
+}
+main .category.active .youtuberList_container .youtuberList_wrapper .currentProfile_container .profileChange_wrapper .profileChange_item.click .icon {
+  position: absolute;
+  top: 59px;
+  left: 63px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #EA2458;
+  display: grid;
+  place-items: center;
+}
+main .category.active .youtuberList_container .youtuberList_wrapper .currentProfile_container .profileChange_wrapper .profileChange_item .profile {
+  width: 58px;
+  height: 64px;
+  background-color: #E1E5EC;
+  position: relative;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+main .category.active .youtuberList_container .youtuberList_wrapper .currentProfile_container .profileChange_wrapper .profileChange_item .profile::after {
+  content: "";
+  width: 56px;
+  height: 62px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+main .category.active .youtuberList_container .youtuberList_wrapper .currentProfile_container .profileChange_wrapper .profileChange_item .profile img {
+  width: 50px;
+  height: 56px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 99;
+  transform: translate(-50%, -50%);
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 main .category.active .youtuberList_container .youtuberList_wrapper .versus {
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -459,11 +535,11 @@ main .category.active .inputData {
 main .category .youtuberList_container {
   width: 100%;
   height: 174px;
-  transition: 0.5s;
+  transition: 0.3s;
   background-color: #fff;
 }
 main .category .youtuberList_container .youtuberList_wrapper {
-  transition: 0.5s;
+  transition: 0.3s;
   width: 1080px;
   height: 174px;
   display: flex;
@@ -471,8 +547,7 @@ main .category .youtuberList_container .youtuberList_wrapper {
   align-items: center;
   margin: 0 auto;
 }
-main .category .youtuberList_container .youtuberList_wrapper .currentProfile_container {
-  transition: 0.5s;
+main .category .youtuberList_container .youtuberList_wrapper .currentProfile_container .currentProfile {
   width: 120px;
   height: 134px;
   background-color: #F8F9FC;
@@ -482,13 +557,11 @@ main .category .youtuberList_container .youtuberList_wrapper .currentProfile_con
   place-items: center;
   padding: 12px;
   box-sizing: border-box;
-}
-main .category .youtuberList_container .youtuberList_wrapper .currentProfile_container .currentProfile {
-  transition: 0.5s;
+  transition: 0.3s;
   position: relative;
 }
 main .category .youtuberList_container .youtuberList_wrapper .currentProfile_container .currentProfile .profile {
-  transition: 0.5s;
+  transition: 0.3s;
   width: 80px;
   height: 90px;
   background-color: #EA2458;
@@ -498,7 +571,7 @@ main .category .youtuberList_container .youtuberList_wrapper .currentProfile_con
 }
 main .category .youtuberList_container .youtuberList_wrapper .currentProfile_container .currentProfile .profile::after {
   content: "";
-  transition: 0.5s;
+  transition: 0.3s;
   width: 77px;
   height: 87px;
   position: absolute;
@@ -510,7 +583,7 @@ main .category .youtuberList_container .youtuberList_wrapper .currentProfile_con
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 main .category .youtuberList_container .youtuberList_wrapper .currentProfile_container .currentProfile .profile img {
-  transition: 0.5s;
+  transition: 0.3s;
   width: 70px;
   height: 80px;
   -o-object-fit: cover;
@@ -524,10 +597,10 @@ main .category .youtuberList_container .youtuberList_wrapper .currentProfile_con
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 main .category .youtuberList_container .youtuberList_wrapper .currentProfile_container .currentProfile .icon {
-  transition: 0.5s;
+  transition: 0.3s;
   position: absolute;
-  right: 0;
-  bottom: 22px;
+  right: 17px;
+  bottom: 26px;
   width: 28px;
   height: 28px;
   border-radius: 50%;
@@ -560,16 +633,16 @@ main .category .youtuberList_container .youtuberList_wrapper .comparisonTarget_c
 }
 main .category .youtuberList_container .youtuberList_wrapper .comparisonTarget_container .comparisonTarget_wrapper {
   display: flex;
-  transition: 0.5s;
+  transition: 0.3s;
   gap: 25px;
   margin: 10px 0;
 }
 main .category .youtuberList_container .youtuberList_wrapper .comparisonTarget_container .comparisonTarget_wrapper .comparisonTarget_item {
-  transition: 0.5s;
+  transition: 0.3s;
   position: relative;
 }
 main .category .youtuberList_container .youtuberList_wrapper .comparisonTarget_container .comparisonTarget_wrapper .comparisonTarget_item .profile {
-  transition: 0.5s;
+  transition: 0.3s;
   width: 80px;
   height: 90px;
   background-color: #E1E5EC;
@@ -579,7 +652,7 @@ main .category .youtuberList_container .youtuberList_wrapper .comparisonTarget_c
 }
 main .category .youtuberList_container .youtuberList_wrapper .comparisonTarget_container .comparisonTarget_wrapper .comparisonTarget_item .profile::after {
   content: "";
-  transition: 0.5s;
+  transition: 0.3s;
   width: 78px;
   height: 88px;
   position: absolute;
@@ -591,7 +664,7 @@ main .category .youtuberList_container .youtuberList_wrapper .comparisonTarget_c
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 main .category .youtuberList_container .youtuberList_wrapper .comparisonTarget_container .comparisonTarget_wrapper .comparisonTarget_item .profile img {
-  transition: 0.5s;
+  transition: 0.3s;
   width: 70px;
   height: 80px;
   -o-object-fit: cover;
@@ -605,7 +678,7 @@ main .category .youtuberList_container .youtuberList_wrapper .comparisonTarget_c
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 main .category .youtuberList_container .youtuberList_wrapper .comparisonTarget_container .comparisonTarget_wrapper .comparisonTarget_item .icon {
-  transition: 0.5s;
+  transition: 0.3s;
   position: absolute;
   right: -3px;
   bottom: 22px;
@@ -667,7 +740,7 @@ main .category .youtuberList_container .youtuberList_wrapper .comparisonTarget_c
   position: relative;
 }
 main .category .youtuberList_container .youtuberList_wrapper .comparisonTarget_container .scroll_wrapper .scroll {
-  transition: 0.5s;
+  transition: 0.3s;
   position: absolute;
   top: 0;
   left: 0;
