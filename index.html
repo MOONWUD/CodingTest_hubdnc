@@ -49,7 +49,7 @@
             <input type="text" placeholder="채널명을 검색해주세요.">
             <button>
               <img src="./assets/images/search.png" alt="search">
-            </button>  
+            </button>
           </fieldset>
         </form>
         <div class="service_right">
@@ -123,13 +123,13 @@
                 <p class="name">풍월량</p>
               </li>
             </ul>
-          </div> 
-  
+          </div>
+
           <p class="versus">VS</p>
-  
+
           <div class="comparisonTarget_container">
             <img class="none arrowLeft" src="./assets/images/arrowLeft.png" alt="arrowLeft">
-  
+
             <ul class="comparisonTarget_wrapper">
               <li class="comparisonTarget_item">
                 <div class="profile">
@@ -140,7 +140,7 @@
                 </div>
                 <p class="name">장삐쭈</p>
               </li>
-              
+
               <li class="comparisonTarget_item">
                 <div class="profile">
                   <img src="./assets/images/초승달.png" alt="초승달">
@@ -150,7 +150,7 @@
                 </div>
                 <p class="name">초승달</p>
               </li>
-  
+
               <li class="comparisonTarget_item">
                 <div class="profile">
                   <img src="./assets/images/풍월량.png" alt="풍월량">
@@ -161,7 +161,7 @@
                 </div>
                 <p class="name">풍월량</p>
               </li>
-              
+
               <li class="comparisonTarget_item">
                 <div class="profile">
                   <img src="./assets/images/선바.png" alt="선바">
@@ -172,7 +172,7 @@
                 </div>
                 <p class="name">선바</p>
               </li>
-              
+
               <li class="comparisonTarget_item">
                 <div class="profile">
                   <img src="./assets/images/엔조이커플_1.png" alt="엔조이커플">
@@ -183,7 +183,7 @@
                 </div>
                 <p class="name">엔조이커플</p>
               </li>
-              
+
               <li class="comparisonTarget_item">
                 <div class="profile">
                   <img src="./assets/images/도티.png" alt="도티">
@@ -194,7 +194,7 @@
                 </div>
                 <p class="name">도티</p>
               </li>
-              
+
               <li class="comparisonTarget_item">
                 <div class="profile">
                   <img src="./assets/images/엔조이커플_2.png" alt="엔조이커플">
@@ -205,7 +205,7 @@
                 </div>
                 <p class="name">엔조이커플</p>
               </li>
-              
+
               <li class="comparisonTarget_item">
                 <div class="profile">
                   <img src="./assets/images/떵개떵.png" alt="떵개떵">
@@ -216,19 +216,19 @@
                 </div>
                 <p class="name">떵개떵</p>
               </li>
-              
+
               <li class="comparisonTarget_item_last">
                 <div class="profile">
                   <img src="./assets/images/plus.png" alt="더하기">
                 </div>
               </li>
             </ul>
-  
+
             <div class="scroll_wrapper">
               <div class="scroll"></div>
               <div class="scrollBar"></div>
             </div>
-  
+
             <img class="none arrowRight" src="./assets/images/arrowRight.png" alt="arrowRight">
           </div>
         </div>
@@ -426,7 +426,7 @@
             <p class="date">2021-08-09</p>
           </div>
         </li>
- 
+
         <li class="video_item">
           <img src="./assets/images/videoImg_4.png" alt="videoImg">
           <p class="youtuberName">침착맨</p>
@@ -437,7 +437,7 @@
             <p class="date">2021-08-09</p>
           </div>
         </li>
- 
+
         <li class="video_item">
           <img src="./assets/images/videoImg_5.png" alt="videoImg">
           <p class="youtuberName">침착맨</p>
@@ -481,7 +481,7 @@
             <p class="date">2021-08-09</p>
           </div>
         </li>
- 
+
         <li class="video_item">
           <img src="./assets/images/videoImg_4.png" alt="videoImg">
           <p class="youtuberName">침착맨</p>
@@ -492,7 +492,7 @@
             <p class="date">2021-08-09</p>
           </div>
         </li>
- 
+
         <li class="video_item">
           <img src="./assets/images/videoImg_5.png" alt="videoImg">
           <p class="youtuberName">침착맨</p>
@@ -504,17 +504,17 @@
           </div>
         </li>
       </ul>
-      
+
       <div class="more_container">
         <div class="divisionLine">구분선</div>
         <div class="moreBtn_wrapper">
           <p class="moreText">더보기</p>
-          <div class="moreBtn" >
+          <div class="moreBtn">
             <img src="./assets/images/hexagon.png" alt="hexagon">
           </div>
         </div>
       </div>
-      
+
     </section>
 
   </main>
@@ -527,11 +527,11 @@
 
 
   <script>
-        let scroll = 5;
+
+    let scroll = 5;
     $(window).on('scroll', (e) => {
-      // let windowScroll = $('html, body').scrollTop();
       let windowScroll = $(e.target).scrollTop();
-      if(windowScroll > scroll) {
+      if (windowScroll > scroll) {
         $('.category').addClass('active');
       } else {
         $('.category').removeClass('active');
