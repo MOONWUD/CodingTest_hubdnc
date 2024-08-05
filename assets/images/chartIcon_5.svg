@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="88" height="40" viewBox="0 0 88 40">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#489ff7"/>
+      <stop offset="1" stop-color="#2d76f1"/>
+    </linearGradient>
+  </defs>
+  <g id="그룹_220" data-name="그룹 220" transform="translate(-511 -1103)">
+    <rect id="사각형_92" data-name="사각형 92" width="88" height="40" rx="20" transform="translate(511 1103)" fill="url(#linear-gradient)"/>
+    <g id="그룹_193" data-name="그룹 193" transform="translate(530 1112)">
+      <g id="그룹_218" data-name="그룹 218">
+        <text id="높음" transform="translate(32.001 17)" fill="#fff" font-size="18" font-family="Pretendard-Bold, Pretendard" font-weight="700"><tspan x="-15.557" y="0">높음</tspan></text>
+        <path id="패스_137" data-name="패스 137" d="M19.825,16.087,15.451,20.8a.612.612,0,0,1-.9,0l-4.375-4.714A.646.646,0,0,1,10.625,15h2.291V10.071A1.058,1.058,0,0,1,13.958,9h2.083a1.058,1.058,0,0,1,1.042,1.071V15h2.291A.646.646,0,0,1,19.825,16.087Z" transform="translate(19.999 26) rotate(180)" fill="#fff" stroke="#fff" stroke-width="0.4"/>
+      </g>
+    </g>
+  </g>
+</svg>

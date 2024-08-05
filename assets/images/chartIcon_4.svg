@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="94" height="94" viewBox="0 0 94 94">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fe5f79"/>
+      <stop offset="1" stop-color="#fe3c6a"/>
+    </linearGradient>
+    <filter id="사각형_157" x="0" y="0" width="94" height="94" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feFlood flood-color="#717a89" flood-opacity="0.278"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="그룹_455" data-name="그룹 455" transform="translate(-653 -1238)">
+    <g transform="matrix(1, 0, 0, 1, 653, 1238)" filter="url(#사각형_157)">
+      <path id="사각형_157-2" data-name="사각형 157" d="M29,0h0A29,29,0,0,1,58,29v0A29,29,0,0,1,29,58H0a0,0,0,0,1,0,0V29A29,29,0,0,1,29,0Z" transform="translate(18 15)" fill="url(#linear-gradient)"/>
+    </g>
+    <text id="_1.5개" data-name="1.5개" transform="translate(699 1289)" fill="#fff" font-size="18" font-family="Helvetica"><tspan x="-18.566" y="0">1.5</tspan><tspan y="0" font-size="14" font-family="AppleSDGothicNeo-Regular, Apple SD Gothic Neo">개</tspan></text>
+  </g>
+</svg>

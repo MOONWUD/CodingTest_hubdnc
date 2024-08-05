@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="92" height="52" viewBox="0 0 92 52">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1" y1="0.5" x2="0" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1ecf94"/>
+      <stop offset="1" stop-color="#40da64"/>
+    </linearGradient>
+    <filter id="사각형_82" x="0" y="0" width="92" height="52" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#4a7faf" flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="그룹_241" data-name="그룹 241" transform="translate(-978 -970)">
+    <g transform="matrix(1, 0, 0, 1, 978, 970)" filter="url(#사각형_82)">
+      <path id="사각형_82-2" data-name="사각형 82" d="M10,0H64A10,10,0,0,1,74,10V24A10,10,0,0,1,64,34H0a0,0,0,0,1,0,0V10A10,10,0,0,1,10,0Z" transform="translate(9 6)" fill="url(#linear-gradient)"/>
+    </g>
+    <text id="_4_7분" data-name="4~7분" transform="translate(1024 999)" fill="#fff" font-size="17" font-family="Pretendard-ExtraBold, Pretendard" font-weight="800"><tspan x="-23.358" y="0">4~7</tspan><tspan y="0" font-family="Pretendard-Regular, Pretendard" font-weight="400">분</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="304" height="100" viewBox="0 0 304 100">
+  <defs>
+    <filter id="사각형_106">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#a6cee6" flood-opacity="0.161" result="color"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur"/>
+      <feComposite operator="in" in="color"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#3dd967"/>
+      <stop offset="1" stop-color="#20d07e"/>
+    </linearGradient>
+    <filter id="사각형_109">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-color="#a6cee6" flood-opacity="0.161" result="color-2"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur-2"/>
+      <feComposite operator="in" in="color-2"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <filter id="사각형_107">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-color="#a6cee6" flood-opacity="0.161" result="color-3"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur-3"/>
+      <feComposite operator="in" in="color-3"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-2" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#3dd967"/>
+      <stop offset="1" stop-color="#20d092"/>
+    </linearGradient>
+    <filter id="사각형_110">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-4"/>
+      <feFlood flood-color="#a6cee6" flood-opacity="0.161" result="color-4"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur-4"/>
+      <feComposite operator="in" in="color-4"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <filter id="사각형_108">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-5"/>
+      <feFlood flood-color="#a6cee6" flood-opacity="0.161" result="color-5"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur-5"/>
+      <feComposite operator="in" in="color-5"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <filter id="사각형_111">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-6"/>
+      <feFlood flood-color="#a6cee6" flood-opacity="0.161" result="color-6"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur-6"/>
+      <feComposite operator="in" in="color-6"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="그룹_461" data-name="그룹 461" transform="translate(-1176 -1251)">
+    <g data-type="innerShadowGroup">
+      <path id="사각형_106-2" data-name="사각형 106" d="M0,0H298a6,6,0,0,1,6,6V6a6,6,0,0,1-6,6H0a0,0,0,0,1,0,0V0A0,0,0,0,1,0,0Z" transform="translate(1176 1251)" fill="#f1f4f8"/>
+      <g transform="matrix(1, 0, 0, 1, 1176, 1251)" filter="url(#사각형_106)">
+        <path id="사각형_106-3" data-name="사각형 106" d="M0,0H298a6,6,0,0,1,6,6V6a6,6,0,0,1-6,6H0a0,0,0,0,1,0,0V0A0,0,0,0,1,0,0Z" fill="#fff"/>
+      </g>
+    </g>
+    <g data-type="innerShadowGroup">
+      <path id="사각형_109-2" data-name="사각형 109" d="M0,0H182a4,4,0,0,1,4,4V4a4,4,0,0,1-4,4H0A0,0,0,0,1,0,8V0A0,0,0,0,1,0,0Z" transform="translate(1178 1253)" fill="url(#linear-gradient)"/>
+      <g transform="matrix(1, 0, 0, 1, 1176, 1251)" filter="url(#사각형_109)">
+        <path id="사각형_109-3" data-name="사각형 109" d="M0,0H182a4,4,0,0,1,4,4V4a4,4,0,0,1-4,4H0A0,0,0,0,1,0,8V0A0,0,0,0,1,0,0Z" transform="translate(2 2)" fill="#fff"/>
+      </g>
+    </g>
+    <g data-type="innerShadowGroup">
+      <rect id="사각형_107-2" data-name="사각형 107" width="304" height="12" rx="6" transform="translate(1176 1295)" fill="#f1f4f8"/>
+      <g transform="matrix(1, 0, 0, 1, 1176, 1251)" filter="url(#사각형_107)">
+        <rect id="사각형_107-3" data-name="사각형 107" width="304" height="12" rx="6" transform="translate(0 44)" fill="#fff"/>
+      </g>
+    </g>
+    <g data-type="innerShadowGroup">
+      <path id="사각형_110-2" data-name="사각형 110" d="M0,0H276a4,4,0,0,1,4,4V4a4,4,0,0,1-4,4H0A0,0,0,0,1,0,8V0A0,0,0,0,1,0,0Z" transform="translate(1178 1297)" fill="url(#linear-gradient-2)"/>
+      <g transform="matrix(1, 0, 0, 1, 1176, 1251)" filter="url(#사각형_110)">
+        <path id="사각형_110-3" data-name="사각형 110" d="M0,0H276a4,4,0,0,1,4,4V4a4,4,0,0,1-4,4H0A0,0,0,0,1,0,8V0A0,0,0,0,1,0,0Z" transform="translate(2 46)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="그룹_257" data-name="그룹 257" transform="translate(376 31)">
+      <g data-type="innerShadowGroup">
+        <rect id="사각형_108-2" data-name="사각형 108" width="304" height="12" rx="6" transform="translate(800 1308)" fill="#f1f4f8"/>
+        <g transform="matrix(1, 0, 0, 1, 800, 1220)" filter="url(#사각형_108)">
+          <rect id="사각형_108-3" data-name="사각형 108" width="304" height="12" rx="6" transform="translate(0 88)" fill="#fff"/>
+        </g>
+      </g>
+      <g data-type="innerShadowGroup">
+        <path id="사각형_111-2" data-name="사각형 111" d="M0,0H182a4,4,0,0,1,4,4V4a4,4,0,0,1-4,4H0A0,0,0,0,1,0,8V0A0,0,0,0,1,0,0Z" transform="translate(802 1310)" fill="url(#linear-gradient-2)"/>
+        <g transform="matrix(1, 0, 0, 1, 800, 1220)" filter="url(#사각형_111)">
+          <path id="사각형_111-3" data-name="사각형 111" d="M0,0H182a4,4,0,0,1,4,4V4a4,4,0,0,1-4,4H0A0,0,0,0,1,0,8V0A0,0,0,0,1,0,0Z" transform="translate(2 90)" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

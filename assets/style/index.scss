@@ -200,9 +200,18 @@ nav {
     font-weight: $w_xs;
     color: #C8D3E1;
 
-    .show {
-      color: #fff;
-      font-weight: $w_sm;
+    li {
+      transition: $transition;
+
+      &:hover {
+        color: #fff;
+        font-weight: $w_sm;
+      }
+
+      &.show {
+        color: #fff;
+        font-weight: $w_sm;
+      }
     }
   }
 }
@@ -222,7 +231,7 @@ main {
         height: 174px;
         background-color: #fff;
         z-index: 9999;
-        box-shadow: 0 3px 20px rgb(99, 108, 136,0.14);
+        box-shadow: 0 3px 20px rgb(99, 108, 136, 0.14);
 
         .youtuberList_wrapper {
           width: 1080px;
@@ -231,14 +240,10 @@ main {
           gap: 15px;
           align-items: center;
           margin: 0 auto;
-    
+
           .currentProfile_container {
             position: relative;
-            &:hover {
-              .profileChange_wrapper {
-                display: flex;
-              }
-            }
+
             .currentProfile {
               width: 120px;
               height: 134px;
@@ -252,6 +257,7 @@ main {
               position: relative;
               top: 0;
               left: 0;
+
               .profile {
                 width: 70px;
                 height: 78px;
@@ -259,7 +265,7 @@ main {
                 position: relative;
                 -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
                 clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    
+
                 &::after {
                   content: "";
                   width: 67px;
@@ -272,7 +278,7 @@ main {
                   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
                   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
                 }
-    
+
                 img {
                   width: 60px;
                   height: 68px;
@@ -286,7 +292,7 @@ main {
                   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
                 }
               }
-    
+
               .icon {
                 position: absolute;
                 right: 22px;
@@ -298,7 +304,7 @@ main {
                 display: grid;
                 place-items: center;
               }
-    
+
               .name {
                 font-family: $pretenderd;
                 font-size: $s_sm;
@@ -308,112 +314,35 @@ main {
                 margin-top: 5px;
               }
             }
-    
-            .profileChange_wrapper {
-              transition: $transition;
-              position: absolute;
-              z-index: 999;
-              bottom: -90px;
-              right: -210px;
-              display: none;
-              justify-content: center;
-              gap: 15px;
-              width: 254px;
-              height: 112px;
-              padding: 12px 0;
-              box-sizing: border-box;
-              border-radius: 8px;
-              background-color: #fff;
-              border: 1px solid #F6F6F6;
-              box-shadow: 0 3px 10px rgba(68, 69, 71, 0.12);
-
-              .profileChange_item {
-                cursor: pointer;
-                &.click {
-                  .profile {
-                    background-color: $pink;
-                  }
-                  .icon {
-                    position: absolute;
-                    top: 59px;
-                    left: 63px;
-                    width: 20px;
-                    height: 20px;
-                    border-radius: 50%;
-                    background-color: $pink;
-                    display: grid;
-                    place-items: center;
-                  }
-                }
-                display: grid;
-                place-items: center;
-                font-family: $pretenderd;
-                font-size: 12px;
-                font-weight: $w_sm;
-                
-                .profile {
-                  width: 58px;
-                  height: 64px;
-                  background-color: #E1E5EC;
-                  position: relative;
-                  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-                  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-      
-                  &::after {
-                    content: "";
-                    width: 56px;
-                    height: 62px;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    background-color: #fff;
-                    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-                    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-                  }
-      
-                  img {
-                    width: 50px;
-                    height: 56px;
-                    object-fit: cover;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    z-index: 99;
-                    transform: translate(-50%, -50%);
-                    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-                    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-                  }
-                }
-              }
-            }
           }
-    
+
           .versus {
             font-family: $pretenderd;
             font-size: $s_xs;
             font-weight: $w_lg;
             color: #3F4244;
           }
-    
+
           .comparisonTarget_container {
             display: grid;
             gap: 0 20px;
             grid-template-columns: 10px 1fr 10px;
             grid-template-rows: 1fr 4px;
+
             .none {
               display: block;
             }
-    
+
             .comparisonTarget_wrapper {
               grid-column: 2 / 3;
               grid-row: 1 / 2;
               display: flex;
               gap: 18px;
               margin: 10px 0;
-    
+
               .comparisonTarget_item {
                 position: relative;
+
                 .profile {
                   width: 70px;
                   height: 78px;
@@ -421,7 +350,7 @@ main {
                   position: relative;
                   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
                   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    
+
                   &::after {
                     content: "";
                     width: 68px;
@@ -434,7 +363,7 @@ main {
                     -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
                     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
                   }
-    
+
                   img {
                     width: 60px;
                     height: 68px;
@@ -448,14 +377,16 @@ main {
                     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
                   }
                 }
-    
+
                 .icon {
                   .activeNone {
                     display: none;
                   }
+
                   .none {
                     display: block;
                   }
+
                   position: absolute;
                   right: -3px;
                   bottom: 22px;
@@ -466,7 +397,7 @@ main {
                   display: grid;
                   place-items: center;
                 }
-    
+
                 .name {
                   font-family: $pretenderd;
                   font-size: $s_sm;
@@ -475,6 +406,7 @@ main {
                   text-align: center;
                   margin-top: 5px;
                 }
+
                 &:nth-child(1),
                 &:nth-child(5),
                 &:nth-child(6) {
@@ -485,7 +417,7 @@ main {
                     position: relative;
                     -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
                     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-      
+
                     &::after {
                       content: "";
                       width: 67px;
@@ -501,18 +433,37 @@ main {
                   }
                 }
               }
+
               .comparisonTarget_item_last {
                 .profile {
                   width: 70px;
                   height: 78px;
-                  background-color: #fff;
-                  border: 1px dashed #E1E5EC;
                   position: relative;
-                  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-                  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    
-                  &::after {
-                    content: "";
+
+                  img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                  }
+
+                  .hexagonDashed_svg {
+                    width: 70px;
+                    height: 78px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    .hexagonDashed {
+                      fill: none;
+                      stroke: #E1E5EC;
+                      stroke-width: 2;
+                      stroke-dasharray: 4, 4;
+                    }
+                  }
+
+                  .hexagon {
                     width: 60px;
                     height: 68px;
                     position: absolute;
@@ -523,23 +474,15 @@ main {
                     -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
                     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
                   }
-    
-                  img {
-                    z-index: 999;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                  }
                 }
               }
             }
-    
+
             .scroll_wrapper {
               grid-column: 2 / 3;
               grid-row: 2 / 3;
               position: relative;
-    
+
               .scroll {
                 position: absolute;
                 top: 0;
@@ -549,7 +492,7 @@ main {
                 border-radius: 2px;
                 background-color: #EDEFF3;
               }
-    
+
               .scrollBar {
                 position: absolute;
                 top: 0;
@@ -583,12 +526,12 @@ main {
       }
     }
 
-
     .youtuberList_container {
       width: 100%;
       height: 174px;
       transition: $transition;
       background-color: #fff;
+
       .youtuberList_wrapper {
         transition: $transition;
         width: 1080px;
@@ -597,8 +540,14 @@ main {
         gap: 15px;
         align-items: center;
         margin: 0 auto;
-        
+
         .currentProfile_container {
+          &:hover {
+            .profileChange_wrapper {
+              display: flex;
+            }
+          }
+
           .currentProfile {
             width: 120px;
             height: 134px;
@@ -611,7 +560,7 @@ main {
             box-sizing: border-box;
             transition: $transition;
             position: relative;
-            
+
             .profile {
               transition: $transition;
               width: 80px;
@@ -620,7 +569,7 @@ main {
               position: relative;
               -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
               clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-              
+
               &::after {
                 content: "";
                 transition: $transition;
@@ -634,7 +583,7 @@ main {
                 -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
                 clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
               }
-              
+
               img {
                 transition: $transition;
                 width: 70px;
@@ -649,12 +598,14 @@ main {
                 clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
               }
             }
-            
+
             .icon {
               transition: $transition;
+
               .none {
                 display: none;
               }
+
               position: absolute;
               right: 17px;
               bottom: 26px;
@@ -665,7 +616,7 @@ main {
               display: grid;
               place-items: center;
             }
-            
+
             .name {
               font-family: $pretenderd;
               font-size: $s_sm;
@@ -675,33 +626,112 @@ main {
               margin-top: 5px;
             }
           }
-          
+
           .profileChange_wrapper {
+            transition: $transition;
+            position: absolute;
+            z-index: 999;
+            bottom: -90px;
+            right: -210px;
             display: none;
+            justify-content: center;
+            gap: 15px;
+            width: 254px;
+            height: 112px;
+            padding: 12px 0;
+            box-sizing: border-box;
+            border-radius: 8px;
+            background-color: #fff;
+            border: 1px solid #F6F6F6;
+            box-shadow: 0 3px 10px rgba(68, 69, 71, 0.12);
+
+            .profileChange_item {
+              cursor: pointer;
+
+              &.click {
+                .profile {
+                  background-color: $pink;
+                }
+
+                .icon {
+                  position: absolute;
+                  top: 59px;
+                  left: 63px;
+                  width: 20px;
+                  height: 20px;
+                  border-radius: 50%;
+                  background-color: $pink;
+                  display: grid;
+                  place-items: center;
+                }
+              }
+
+              display: grid;
+              place-items: center;
+              font-family: $pretenderd;
+              font-size: 12px;
+              font-weight: $w_sm;
+
+              .profile {
+                width: 58px;
+                height: 64px;
+                background-color: #E1E5EC;
+                position: relative;
+                -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+                clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+
+                &::after {
+                  content: "";
+                  width: 56px;
+                  height: 62px;
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  background-color: #fff;
+                  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+                  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+                }
+
+                img {
+                  width: 50px;
+                  height: 56px;
+                  object-fit: cover;
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  z-index: 99;
+                  transform: translate(-50%, -50%);
+                  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+                  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+                }
+              }
+            }
           }
         }
-        
+
         .versus {
           font-family: $pretenderd;
           font-size: $s_xs;
           font-weight: $w_lg;
           color: #3F4244;
         }
-        
+
         .comparisonTarget_container {
           .none {
             display: none;
           }
-          
+
           .comparisonTarget_wrapper {
             display: flex;
             transition: $transition;
             gap: 25px;
             margin: 10px 0;
-            
+
             .comparisonTarget_item {
               transition: $transition;
               position: relative;
+
               .profile {
                 transition: $transition;
                 width: 80px;
@@ -710,7 +740,7 @@ main {
                 position: relative;
                 -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
                 clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-                
+
                 &::after {
                   content: "";
                   transition: $transition;
@@ -724,7 +754,7 @@ main {
                   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
                   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
                 }
-                
+
                 img {
                   transition: $transition;
                   width: 70px;
@@ -739,7 +769,7 @@ main {
                   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
                 }
               }
-              
+
               .icon {
                 transition: $transition;
                 position: absolute;
@@ -752,7 +782,7 @@ main {
                 display: grid;
                 place-items: center;
               }
-              
+
               .name {
                 font-family: $pretenderd;
                 font-size: $s_sm;
@@ -761,11 +791,11 @@ main {
                 text-align: center;
                 margin-top: 5px;
               }
-              
+
               &:first-child {
                 .profile {
                   background-color: $yellow;
-                  
+
                   &::after {
                     content: "";
                     width: 77px;
@@ -773,6 +803,7 @@ main {
                   }
                 }
               }
+
               &:nth-child(1),
               &:nth-child(2) {
                 .icon {
@@ -780,18 +811,37 @@ main {
                 }
               }
             }
+
             .comparisonTarget_item_last {
               .profile {
                 width: 80px;
                 height: 90px;
-                background-color: #fff;
-                border: 1px dashed #E1E5EC;
                 position: relative;
-                -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-                clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  
-                &::after {
-                  content: "";
+
+                img {
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                }
+
+                .hexagonDashed_svg {
+                  width: 80px;
+                  height: 90px;
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+
+                  .hexagonDashed {
+                    fill: none;
+                    stroke: #E1E5EC;
+                    stroke-width: 2;
+                    stroke-dasharray: 4, 4;
+                  }
+                }
+
+                .hexagon {
                   width: 70px;
                   height: 80px;
                   position: absolute;
@@ -802,21 +852,13 @@ main {
                   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
                   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
                 }
-  
-                img {
-                  z-index: 999;
-                  position: absolute;
-                  top: 50%;
-                  left: 50%;
-                  transform: translate(-50%, -50%);
-                }
               }
             }
           }
-  
+
           .scroll_wrapper {
             position: relative;
-  
+
             .scroll {
               transition: $transition;
               position: absolute;
@@ -827,7 +869,7 @@ main {
               border-radius: 2px;
               background-color: #EDEFF3;
             }
-  
+
             .scrollBar {
               position: absolute;
               top: 0;
@@ -910,8 +952,10 @@ main {
 
   /*===== competition */
   .competition {
+    box-sizing: border-box;
     width: 1080px;
     margin: 0 auto 120px;
+    overflow: hidden;
 
     .sectionTitle {
       @include scetionTitle;
@@ -926,120 +970,159 @@ main {
       font-weight: $w_xs;
       color: #BFC6CC;
       margin-bottom: 35px;
-
       li {
-        cursor: pointer;
-      }
+        &.show {
+          font-weight: $w_sm;
+          color: $mainColor;
+          position: relative;
 
-      .show {
-        font-weight: $w_sm;
-        color: $mainColor;
+          &::after {
+            content: "";
+            width: 100%;
+            height: 2px;
+            background-color: $mainColor;
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+          }
+        }
+
+        transition: $transition;
+        cursor: pointer;
         position: relative;
 
         &::after {
           content: "";
-          width: 100%;
+          transition: $transition;
+          width: 0%;
           height: 2px;
           background-color: $mainColor;
           position: absolute;
           bottom: -10px;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-      }
-    }
-
-    .youtuber_wrapper {
-      display: flex;
-      gap: 20px;
-
-      .youyuber_item {
-        width: 138px;
-        height: 174px;
-        border: 1px solid #EEEFF1;
-        border-radius: 3px;
-        text-align: center;
-        position: relative;
-        padding: 20px 0;
-        box-sizing: border-box;
-
-        .percent {
-          width: 40px;
-          height: 40px;
-          border-radius: 50%;
-          background-color: $blue;
-          display: grid;
-          place-items: center;
-          position: absolute;
-          right: -6px;
-          top: -8px;
-
-          p {
-            color: #fff;
-            font-family: $notoSans;
-            font-size: $s_xxs;
-            font-weight: $w_sm;
-
-            em {
-              padding-top: 2px;
-              font-style: normal;
-              font-size: $s_xs;
-              font-weight: $w_md;
-              display: block;
-              line-height: 0.7;
-            }
-          }
+          left: 0;
         }
 
-        .profile {
-          margin: 0 auto 10px;
-          width: 72px;
-          height: 80px;
-          background-color: $skyblue;
-          position: relative;
-          -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        &:hover {
+          font-weight: $w_sm;
+          color: $mainColor;
 
           &::after {
             content: "";
-            width: 70px;
-            height: 78px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #fff;
-            -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-          }
-
-          img {
-            width: 62px;
-            height: 70px;
-            object-fit: cover;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            z-index: 99;
-            transform: translate(-50%, -50%);
-            -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            width: 100%;
           }
         }
-
-        .name {
-          font-family: $pretenderd;
-          font-size: $s_sm;
-          font-weight: $w_sm;
-          color: #3F4244;
-          margin-bottom: 8px;
+      }
+    }
+    .youtuber_container {
+      display: flex;
+      // gap: 18px;
+      width: 300%;
+      .youtuber_wrapper {
+        width: 100%;
+        display: flex;
+        gap: 18px;
+        &.viewCount {
+          .youyuber_item {
+            .percent {
+              background-color: $pink;
+            }
+          }
         }
-
-        .subscriberCount {
-          font-family: $pretenderd;
-          font-size: $s_xs;
-          font-weight: $w_sm;
-          color: #B8C0C6;
+        &.uploadedVideo {
+          .youyuber_item {
+            .percent {
+              background-color: $yellow;
+            }
+          }
+        }
+        .youyuber_item {
+          width: 138px;
+          height: 174px;
+          border: 1px solid #EEEFF1;
+          border-radius: 3px;
+          text-align: center;
+          position: relative;
+          padding: 20px 0;
+          box-sizing: border-box;
+  
+          .percent {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: $blue;
+            display: grid;
+            place-items: center;
+            position: absolute;
+            right: -6px;
+            top: -8px;
+  
+            p {
+              color: #fff;
+              font-family: $notoSans;
+              font-size: $s_xxs;
+              font-weight: $w_sm;
+  
+              em {
+                padding-top: 2px;
+                font-style: normal;
+                font-size: $s_xs;
+                font-weight: $w_md;
+                display: block;
+                line-height: 0.7;
+              }
+            }
+          }
+  
+          .profile {
+            margin: 0 auto 10px;
+            width: 72px;
+            height: 80px;
+            background-color: $skyblue;
+            position: relative;
+            -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  
+            &::after {
+              content: "";
+              width: 70px;
+              height: 78px;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              background-color: #fff;
+              -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+              clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            }
+  
+            img {
+              width: 62px;
+              height: 70px;
+              object-fit: cover;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              z-index: 99;
+              transform: translate(-50%, -50%);
+              -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+              clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            }
+          }
+  
+          .name {
+            font-family: $pretenderd;
+            font-size: $s_sm;
+            font-weight: $w_sm;
+            color: #3F4244;
+            margin-bottom: 8px;
+          }
+  
+          .subscriberCount {
+            font-family: $pretenderd;
+            font-size: $s_xs;
+            font-weight: $w_sm;
+            color: #B8C0C6;
+          }
         }
       }
     }
@@ -1058,24 +1141,96 @@ main {
 
     .chart_wrapper {
       display: grid;
-      gap: 25px;
-      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      grid-template-columns: repeat(3, 344px);
       grid-template-rows: repeat(2, 208px);
 
       .chart_item {
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
         border: 1px solid #EEEFF1;
         border-radius: 3px;
         box-shadow: 0 3px 12px rgba(149, 166, 182, 0.11);
-
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(10, 1fr);
         .chartTitle {
+          grid-column: 1 / 11;
+          grid-row: 2 / 3;
           font-family: $pretenderd;
           font-size: $s_md;
           font-weight: $w_md;
+        }
+        .chartImg {
+          grid-column: 1 / 11;
+          grid-row: 4 / 10;
+          align-self: end;
+        }
+        &:hover {
+          .chartIcon {
+            transition: $transition;
+            transform: scale(1.1);
+          }
+        }
+
+        &:nth-child(1) {
+          .chartIcon {
+            grid-column: 4 / 8 ;
+            grid-row: 7 / 10;
+            align-self: end;
+          }
+        }
+
+        &:nth-child(2) {
+          .chartIcon {
+            grid-column: 7 / 10;
+            grid-row: 4 / 6;
+            align-self: center;
+            justify-self: start;
+          }
+        }
+        
+        &:nth-child(3) {
+          .chartIcon {
+            grid-column: 7 / 10;
+            grid-row: 4 / 6;
+            align-self: center;
+            justify-self: start;
+          }
+        }
+        
+        &:nth-child(4) {
+          .chartIcon {
+            grid-column: 8 / 10;
+            grid-row: 4 / 7;
+            align-self: end;
+            justify-self: start;
+          }
+        }
+        
+        &:nth-child(5) {
+          .chartIcon {
+            grid-column: 4 / 8 ;
+            grid-row: 7 / 10;
+            align-self: end;
+          }
+        }
+        
+        &:nth-child(6) {
+          .chartIcon_1 {
+            grid-column: 3 / 6;
+            grid-row: 4 / 6;
+            align-self: end;
+            justify-self: end;
+          }
+          .chartIcon_2 {
+            grid-column: 7 / 11;
+            grid-row: 6 / 8;
+            align-self: end;
+          }
+          .chartIcon_3 {
+            grid-column: 4 / 7;
+            grid-row: 8 / 10;
+          }
         }
       }
     }
@@ -1147,6 +1302,63 @@ main {
       }
     }
 
+    .moreBox {
+      margin: 40px auto;
+      display: none;
+
+      .video_wrapper {
+        margin: 0 auto;
+        width: 1080px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 40px 20px;
+
+        .video_item {
+          cursor: pointer;
+
+          img {
+            margin-bottom: 10px;
+          }
+
+          .youtuberName {
+            font-family: $pretenderd;
+            font-size: $s_sm;
+            font-weight: $w_xs;
+            color: #515C64;
+            margin-bottom: 10px;
+          }
+
+          .videoName {
+            font-family: $pretenderd;
+            font-size: $s_md;
+            font-weight: $w_sm;
+            color: #252525;
+            height: 43px;
+            overflow: hidden;
+            margin-bottom: 15px;
+          }
+
+          .videoInformation {
+            font-family: $pretenderd;
+            font-size: $s_sm;
+            font-weight: $w_xs;
+            color: #959EA5;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            .breakpoint {
+              width: 3px;
+              height: 3px;
+              border-radius: 50%;
+              background-color: #D6DEE6;
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+
     .more_container {
       margin: 40px auto 0;
       text-align: center;
@@ -1170,8 +1382,46 @@ main {
         align-items: center;
         gap: 15px;
 
+        &:hover {
+          color: #3F4244;
+
+          .moreBtn {
+            svg {
+              .hexagon {
+                stroke: $mainColor;
+              }
+            }
+
+            &::after {
+              content: "";
+              background-color: $mainColor;
+            }
+
+            &::before {
+              content: "";
+              background-color: $mainColor;
+            }
+          }
+        }
+
         .moreBtn {
           position: relative;
+          margin-left: 10px;
+
+          svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 99;
+            width: 21px;
+            height: 24px;
+
+            .hexagon {
+              stroke-width: 3;
+              stroke: #858C93;
+            }
+          }
 
           &::after {
             content: "";

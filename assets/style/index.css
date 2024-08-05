@@ -1,5 +1,6 @@
 /*========== font */
 /*===== font-family */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 /*===== font-size */
 /*===== font-weight */
 /*========== color */
@@ -187,7 +188,14 @@ nav .nav_wrapper {
   font-weight: 400;
   color: #C8D3E1;
 }
-nav .nav_wrapper .show {
+nav .nav_wrapper li {
+  transition: 0.3s;
+}
+nav .nav_wrapper li:hover {
+  color: #fff;
+  font-weight: 500;
+}
+nav .nav_wrapper li.show {
   color: #fff;
   font-weight: 500;
 }
@@ -220,9 +228,6 @@ main .category.active .youtuberList_container .youtuberList_wrapper {
 }
 main .category.active .youtuberList_container .youtuberList_wrapper .currentProfile_container {
   position: relative;
-}
-main .category.active .youtuberList_container .youtuberList_wrapper .currentProfile_container:hover .profileChange_wrapper {
-  display: flex;
 }
 main .category.active .youtuberList_container .youtuberList_wrapper .currentProfile_container .currentProfile {
   width: 120px;
@@ -289,79 +294,6 @@ main .category.active .youtuberList_container .youtuberList_wrapper .currentProf
   color: #3F4244;
   text-align: center;
   margin-top: 5px;
-}
-main .category.active .youtuberList_container .youtuberList_wrapper .currentProfile_container .profileChange_wrapper {
-  transition: 0.3s;
-  position: absolute;
-  z-index: 999;
-  bottom: -90px;
-  right: -210px;
-  display: none;
-  justify-content: center;
-  gap: 15px;
-  width: 254px;
-  height: 112px;
-  padding: 12px 0;
-  box-sizing: border-box;
-  border-radius: 8px;
-  background-color: #fff;
-  border: 1px solid #F6F6F6;
-  box-shadow: 0 3px 10px rgba(68, 69, 71, 0.12);
-}
-main .category.active .youtuberList_container .youtuberList_wrapper .currentProfile_container .profileChange_wrapper .profileChange_item {
-  cursor: pointer;
-  display: grid;
-  place-items: center;
-  font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-}
-main .category.active .youtuberList_container .youtuberList_wrapper .currentProfile_container .profileChange_wrapper .profileChange_item.click .profile {
-  background-color: #EA2458;
-}
-main .category.active .youtuberList_container .youtuberList_wrapper .currentProfile_container .profileChange_wrapper .profileChange_item.click .icon {
-  position: absolute;
-  top: 59px;
-  left: 63px;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: #EA2458;
-  display: grid;
-  place-items: center;
-}
-main .category.active .youtuberList_container .youtuberList_wrapper .currentProfile_container .profileChange_wrapper .profileChange_item .profile {
-  width: 58px;
-  height: 64px;
-  background-color: #E1E5EC;
-  position: relative;
-  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-}
-main .category.active .youtuberList_container .youtuberList_wrapper .currentProfile_container .profileChange_wrapper .profileChange_item .profile::after {
-  content: "";
-  width: 56px;
-  height: 62px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-}
-main .category.active .youtuberList_container .youtuberList_wrapper .currentProfile_container .profileChange_wrapper .profileChange_item .profile img {
-  width: 50px;
-  height: 56px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 99;
-  transform: translate(-50%, -50%);
-  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 main .category.active .youtuberList_container .youtuberList_wrapper .versus {
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -469,14 +401,29 @@ main .category.active .youtuberList_container .youtuberList_wrapper .comparisonT
 main .category.active .youtuberList_container .youtuberList_wrapper .comparisonTarget_container .comparisonTarget_wrapper .comparisonTarget_item_last .profile {
   width: 70px;
   height: 78px;
-  background-color: #fff;
-  border: 1px dashed #E1E5EC;
   position: relative;
-  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
-main .category.active .youtuberList_container .youtuberList_wrapper .comparisonTarget_container .comparisonTarget_wrapper .comparisonTarget_item_last .profile::after {
-  content: "";
+main .category.active .youtuberList_container .youtuberList_wrapper .comparisonTarget_container .comparisonTarget_wrapper .comparisonTarget_item_last .profile img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main .category.active .youtuberList_container .youtuberList_wrapper .comparisonTarget_container .comparisonTarget_wrapper .comparisonTarget_item_last .profile .hexagonDashed_svg {
+  width: 70px;
+  height: 78px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main .category.active .youtuberList_container .youtuberList_wrapper .comparisonTarget_container .comparisonTarget_wrapper .comparisonTarget_item_last .profile .hexagonDashed_svg .hexagonDashed {
+  fill: none;
+  stroke: #E1E5EC;
+  stroke-width: 2;
+  stroke-dasharray: 4, 4;
+}
+main .category.active .youtuberList_container .youtuberList_wrapper .comparisonTarget_container .comparisonTarget_wrapper .comparisonTarget_item_last .profile .hexagon {
   width: 60px;
   height: 68px;
   position: absolute;
@@ -486,13 +433,6 @@ main .category.active .youtuberList_container .youtuberList_wrapper .comparisonT
   background-color: #B9BDC0;
   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-}
-main .category.active .youtuberList_container .youtuberList_wrapper .comparisonTarget_container .comparisonTarget_wrapper .comparisonTarget_item_last .profile img {
-  z-index: 999;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 main .category.active .youtuberList_container .youtuberList_wrapper .comparisonTarget_container .scroll_wrapper {
   grid-column: 2/3;
@@ -546,6 +486,9 @@ main .category .youtuberList_container .youtuberList_wrapper {
   gap: 15px;
   align-items: center;
   margin: 0 auto;
+}
+main .category .youtuberList_container .youtuberList_wrapper .currentProfile_container:hover .profileChange_wrapper {
+  display: flex;
 }
 main .category .youtuberList_container .youtuberList_wrapper .currentProfile_container .currentProfile {
   width: 120px;
@@ -620,7 +563,77 @@ main .category .youtuberList_container .youtuberList_wrapper .currentProfile_con
   margin-top: 5px;
 }
 main .category .youtuberList_container .youtuberList_wrapper .currentProfile_container .profileChange_wrapper {
+  transition: 0.3s;
+  position: absolute;
+  z-index: 999;
+  bottom: -90px;
+  right: -210px;
   display: none;
+  justify-content: center;
+  gap: 15px;
+  width: 254px;
+  height: 112px;
+  padding: 12px 0;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-color: #fff;
+  border: 1px solid #F6F6F6;
+  box-shadow: 0 3px 10px rgba(68, 69, 71, 0.12);
+}
+main .category .youtuberList_container .youtuberList_wrapper .currentProfile_container .profileChange_wrapper .profileChange_item {
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+main .category .youtuberList_container .youtuberList_wrapper .currentProfile_container .profileChange_wrapper .profileChange_item.click .profile {
+  background-color: #EA2458;
+}
+main .category .youtuberList_container .youtuberList_wrapper .currentProfile_container .profileChange_wrapper .profileChange_item.click .icon {
+  position: absolute;
+  top: 59px;
+  left: 63px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #EA2458;
+  display: grid;
+  place-items: center;
+}
+main .category .youtuberList_container .youtuberList_wrapper .currentProfile_container .profileChange_wrapper .profileChange_item .profile {
+  width: 58px;
+  height: 64px;
+  background-color: #E1E5EC;
+  position: relative;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+main .category .youtuberList_container .youtuberList_wrapper .currentProfile_container .profileChange_wrapper .profileChange_item .profile::after {
+  content: "";
+  width: 56px;
+  height: 62px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+main .category .youtuberList_container .youtuberList_wrapper .currentProfile_container .profileChange_wrapper .profileChange_item .profile img {
+  width: 50px;
+  height: 56px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 99;
+  transform: translate(-50%, -50%);
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 main .category .youtuberList_container .youtuberList_wrapper .versus {
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -711,14 +724,29 @@ main .category .youtuberList_container .youtuberList_wrapper .comparisonTarget_c
 main .category .youtuberList_container .youtuberList_wrapper .comparisonTarget_container .comparisonTarget_wrapper .comparisonTarget_item_last .profile {
   width: 80px;
   height: 90px;
-  background-color: #fff;
-  border: 1px dashed #E1E5EC;
   position: relative;
-  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
-main .category .youtuberList_container .youtuberList_wrapper .comparisonTarget_container .comparisonTarget_wrapper .comparisonTarget_item_last .profile::after {
-  content: "";
+main .category .youtuberList_container .youtuberList_wrapper .comparisonTarget_container .comparisonTarget_wrapper .comparisonTarget_item_last .profile img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main .category .youtuberList_container .youtuberList_wrapper .comparisonTarget_container .comparisonTarget_wrapper .comparisonTarget_item_last .profile .hexagonDashed_svg {
+  width: 80px;
+  height: 90px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main .category .youtuberList_container .youtuberList_wrapper .comparisonTarget_container .comparisonTarget_wrapper .comparisonTarget_item_last .profile .hexagonDashed_svg .hexagonDashed {
+  fill: none;
+  stroke: #E1E5EC;
+  stroke-width: 2;
+  stroke-dasharray: 4, 4;
+}
+main .category .youtuberList_container .youtuberList_wrapper .comparisonTarget_container .comparisonTarget_wrapper .comparisonTarget_item_last .profile .hexagon {
   width: 70px;
   height: 80px;
   position: absolute;
@@ -728,13 +756,6 @@ main .category .youtuberList_container .youtuberList_wrapper .comparisonTarget_c
   background-color: #B9BDC0;
   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-}
-main .category .youtuberList_container .youtuberList_wrapper .comparisonTarget_container .comparisonTarget_wrapper .comparisonTarget_item_last .profile img {
-  z-index: 999;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 main .category .youtuberList_container .youtuberList_wrapper .comparisonTarget_container .scroll_wrapper {
   position: relative;
@@ -817,8 +838,10 @@ main .category .inputData .data span {
   font-weight: 800;
 }
 main .competition {
+  box-sizing: border-box;
   width: 1080px;
   margin: 0 auto 120px;
+  overflow: hidden;
 }
 main .competition .sectionTitle {
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -842,28 +865,58 @@ main .competition .competitionNav_wrapper {
   margin-bottom: 35px;
 }
 main .competition .competitionNav_wrapper li {
+  transition: 0.3s;
   cursor: pointer;
+  position: relative;
 }
-main .competition .competitionNav_wrapper .show {
+main .competition .competitionNav_wrapper li.show {
   font-weight: 500;
   color: #0D2639;
   position: relative;
 }
-main .competition .competitionNav_wrapper .show::after {
+main .competition .competitionNav_wrapper li.show::after {
   content: "";
   width: 100%;
   height: 2px;
   background-color: #0D2639;
   position: absolute;
   bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
 }
-main .competition .youtuber_wrapper {
+main .competition .competitionNav_wrapper li::after {
+  content: "";
+  transition: 0.3s;
+  width: 0%;
+  height: 2px;
+  background-color: #0D2639;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+}
+main .competition .competitionNav_wrapper li:hover {
+  font-weight: 500;
+  color: #0D2639;
+}
+main .competition .competitionNav_wrapper li:hover::after {
+  content: "";
+  width: 100%;
+}
+main .competition .youtuber_container {
   display: flex;
-  gap: 20px;
+  width: 300%;
 }
-main .competition .youtuber_wrapper .youyuber_item {
+main .competition .youtuber_container .youtuber_wrapper {
+  width: 100%;
+  display: flex;
+  gap: 18px;
+}
+main .competition .youtuber_container .youtuber_wrapper.viewCount .youyuber_item .percent {
+  background-color: #EA2458;
+}
+main .competition .youtuber_container .youtuber_wrapper.uploadedVideo .youyuber_item .percent {
+  background-color: #FED317;
+}
+main .competition .youtuber_container .youtuber_wrapper .youyuber_item {
   width: 138px;
   height: 174px;
   border: 1px solid #EEEFF1;
@@ -873,7 +926,7 @@ main .competition .youtuber_wrapper .youyuber_item {
   padding: 20px 0;
   box-sizing: border-box;
 }
-main .competition .youtuber_wrapper .youyuber_item .percent {
+main .competition .youtuber_container .youtuber_wrapper .youyuber_item .percent {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -884,13 +937,13 @@ main .competition .youtuber_wrapper .youyuber_item .percent {
   right: -6px;
   top: -8px;
 }
-main .competition .youtuber_wrapper .youyuber_item .percent p {
+main .competition .youtuber_container .youtuber_wrapper .youyuber_item .percent p {
   color: #fff;
   font-family: "Noto Sans KR", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 11px;
   font-weight: 500;
 }
-main .competition .youtuber_wrapper .youyuber_item .percent p em {
+main .competition .youtuber_container .youtuber_wrapper .youyuber_item .percent p em {
   padding-top: 2px;
   font-style: normal;
   font-size: 13px;
@@ -898,7 +951,7 @@ main .competition .youtuber_wrapper .youyuber_item .percent p em {
   display: block;
   line-height: 0.7;
 }
-main .competition .youtuber_wrapper .youyuber_item .profile {
+main .competition .youtuber_container .youtuber_wrapper .youyuber_item .profile {
   margin: 0 auto 10px;
   width: 72px;
   height: 80px;
@@ -907,7 +960,7 @@ main .competition .youtuber_wrapper .youyuber_item .profile {
   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
-main .competition .youtuber_wrapper .youyuber_item .profile::after {
+main .competition .youtuber_container .youtuber_wrapper .youyuber_item .profile::after {
   content: "";
   width: 70px;
   height: 78px;
@@ -919,7 +972,7 @@ main .competition .youtuber_wrapper .youyuber_item .profile::after {
   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
-main .competition .youtuber_wrapper .youyuber_item .profile img {
+main .competition .youtuber_container .youtuber_wrapper .youyuber_item .profile img {
   width: 62px;
   height: 70px;
   -o-object-fit: cover;
@@ -932,14 +985,14 @@ main .competition .youtuber_wrapper .youyuber_item .profile img {
   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
-main .competition .youtuber_wrapper .youyuber_item .name {
+main .competition .youtuber_container .youtuber_wrapper .youyuber_item .name {
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 14px;
   font-weight: 500;
   color: #3F4244;
   margin-bottom: 8px;
 }
-main .competition .youtuber_wrapper .youyuber_item .subscriberCount {
+main .competition .youtuber_container .youtuber_wrapper .youyuber_item .subscriberCount {
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 13px;
   font-weight: 500;
@@ -963,24 +1016,77 @@ main .comparison .sectionTitle em {
 }
 main .comparison .chart_wrapper {
   display: grid;
-  gap: 25px;
-  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  grid-template-columns: repeat(3, 344px);
   grid-template-rows: repeat(2, 208px);
 }
 main .comparison .chart_wrapper .chart_item {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
   border: 1px solid #EEEFF1;
   border-radius: 3px;
   box-shadow: 0 3px 12px rgba(149, 166, 182, 0.11);
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
 }
 main .comparison .chart_wrapper .chart_item .chartTitle {
+  grid-column: 1/11;
+  grid-row: 2/3;
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 15px;
   font-weight: 600;
+}
+main .comparison .chart_wrapper .chart_item .chartImg {
+  grid-column: 1/11;
+  grid-row: 4/10;
+  align-self: end;
+}
+main .comparison .chart_wrapper .chart_item:hover .chartIcon {
+  transition: 0.3s;
+  transform: scale(1.1);
+}
+main .comparison .chart_wrapper .chart_item:nth-child(1) .chartIcon {
+  grid-column: 4/8;
+  grid-row: 7/10;
+  align-self: end;
+}
+main .comparison .chart_wrapper .chart_item:nth-child(2) .chartIcon {
+  grid-column: 7/10;
+  grid-row: 4/6;
+  align-self: center;
+  justify-self: start;
+}
+main .comparison .chart_wrapper .chart_item:nth-child(3) .chartIcon {
+  grid-column: 7/10;
+  grid-row: 4/6;
+  align-self: center;
+  justify-self: start;
+}
+main .comparison .chart_wrapper .chart_item:nth-child(4) .chartIcon {
+  grid-column: 8/10;
+  grid-row: 4/7;
+  align-self: end;
+  justify-self: start;
+}
+main .comparison .chart_wrapper .chart_item:nth-child(5) .chartIcon {
+  grid-column: 4/8;
+  grid-row: 7/10;
+  align-self: end;
+}
+main .comparison .chart_wrapper .chart_item:nth-child(6) .chartIcon_1 {
+  grid-column: 3/6;
+  grid-row: 4/6;
+  align-self: end;
+  justify-self: end;
+}
+main .comparison .chart_wrapper .chart_item:nth-child(6) .chartIcon_2 {
+  grid-column: 7/11;
+  grid-row: 6/8;
+  align-self: end;
+}
+main .comparison .chart_wrapper .chart_item:nth-child(6) .chartIcon_3 {
+  grid-column: 4/7;
+  grid-row: 8/10;
 }
 main .popularVideo {
   width: 100%;
@@ -1046,6 +1152,55 @@ main .popularVideo .video_wrapper .video_item .videoInformation .breakpoint {
   background-color: #D6DEE6;
   display: inline-block;
 }
+main .popularVideo .moreBox {
+  margin: 40px auto;
+  display: none;
+}
+main .popularVideo .moreBox .video_wrapper {
+  margin: 0 auto;
+  width: 1080px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px 20px;
+}
+main .popularVideo .moreBox .video_wrapper .video_item {
+  cursor: pointer;
+}
+main .popularVideo .moreBox .video_wrapper .video_item img {
+  margin-bottom: 10px;
+}
+main .popularVideo .moreBox .video_wrapper .video_item .youtuberName {
+  font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #515C64;
+  margin-bottom: 10px;
+}
+main .popularVideo .moreBox .video_wrapper .video_item .videoName {
+  font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #252525;
+  height: 43px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+main .popularVideo .moreBox .video_wrapper .video_item .videoInformation {
+  font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #959EA5;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+main .popularVideo .moreBox .video_wrapper .video_item .videoInformation .breakpoint {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #D6DEE6;
+  display: inline-block;
+}
 main .popularVideo .more_container {
   margin: 40px auto 0;
   text-align: center;
@@ -1068,8 +1223,36 @@ main .popularVideo .more_container .moreBtn_wrapper {
   align-items: center;
   gap: 15px;
 }
+main .popularVideo .more_container .moreBtn_wrapper:hover {
+  color: #3F4244;
+}
+main .popularVideo .more_container .moreBtn_wrapper:hover .moreBtn svg .hexagon {
+  stroke: #0D2639;
+}
+main .popularVideo .more_container .moreBtn_wrapper:hover .moreBtn::after {
+  content: "";
+  background-color: #0D2639;
+}
+main .popularVideo .more_container .moreBtn_wrapper:hover .moreBtn::before {
+  content: "";
+  background-color: #0D2639;
+}
 main .popularVideo .more_container .moreBtn_wrapper .moreBtn {
   position: relative;
+  margin-left: 10px;
+}
+main .popularVideo .more_container .moreBtn_wrapper .moreBtn svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  width: 21px;
+  height: 24px;
+}
+main .popularVideo .more_container .moreBtn_wrapper .moreBtn svg .hexagon {
+  stroke-width: 3;
+  stroke: #858C93;
 }
 main .popularVideo .more_container .moreBtn_wrapper .moreBtn::after {
   content: "";
