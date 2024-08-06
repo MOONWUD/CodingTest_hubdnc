@@ -689,13 +689,16 @@ main {
             margin: 10px 0 0;
             overflow-x: scroll;
             width: 922px;
+
             &::-webkit-scrollbar {
               height: 4px;
             }
+
             &::-webkit-scrollbar-track {
               background-color: #EDEFF3;
               border-radius: 2px;
             }
+
             &::-webkit-scrollbar-thumb {
               border-radius: 2px;
               background-color: #B9BDC0;
@@ -705,6 +708,7 @@ main {
               transition: $transition;
               position: relative;
               margin-bottom: 10px;
+
               .profile {
                 transition: $transition;
                 width: 80px;
@@ -918,6 +922,7 @@ main {
       font-weight: $w_xs;
       color: #BFC6CC;
       margin-bottom: 35px;
+
       li {
         &.show {
           font-weight: $w_sm;
@@ -961,14 +966,17 @@ main {
         }
       }
     }
+
     .youtuber_container {
       display: flex;
       // gap: 18px;
       width: 300%;
+
       .youtuber_wrapper {
         width: 100%;
         display: flex;
         gap: 18px;
+
         &.viewCount {
           .youyuber_item {
             .percent {
@@ -976,6 +984,7 @@ main {
             }
           }
         }
+
         &.uploadedVideo {
           .youyuber_item {
             .percent {
@@ -983,6 +992,7 @@ main {
             }
           }
         }
+
         .youyuber_item {
           width: 138px;
           height: 174px;
@@ -992,7 +1002,7 @@ main {
           position: relative;
           padding: 20px 0;
           box-sizing: border-box;
-  
+
           .percent {
             width: 40px;
             height: 40px;
@@ -1003,13 +1013,13 @@ main {
             position: absolute;
             right: -6px;
             top: -8px;
-  
+
             p {
               color: #fff;
               font-family: $notoSans;
               font-size: $s_xxs;
               font-weight: $w_sm;
-  
+
               em {
                 padding-top: 2px;
                 font-style: normal;
@@ -1020,7 +1030,7 @@ main {
               }
             }
           }
-  
+
           .profile {
             margin: 0 auto 10px;
             width: 72px;
@@ -1029,7 +1039,7 @@ main {
             position: relative;
             -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
             clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  
+
             &::after {
               content: "";
               width: 70px;
@@ -1042,7 +1052,7 @@ main {
               -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
               clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
             }
-  
+
             img {
               width: 62px;
               height: 70px;
@@ -1056,7 +1066,7 @@ main {
               clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
             }
           }
-  
+
           .name {
             font-family: $pretenderd;
             font-size: $s_sm;
@@ -1064,7 +1074,7 @@ main {
             color: #3F4244;
             margin-bottom: 8px;
           }
-  
+
           .subscriberCount {
             font-family: $pretenderd;
             font-size: $s_xs;
@@ -1101,6 +1111,7 @@ main {
         place-items: center;
         grid-template-columns: repeat(10, 1fr);
         grid-template-rows: repeat(10, 1fr);
+
         .chartTitle {
           grid-column: 1 / 11;
           grid-row: 2 / 3;
@@ -1108,11 +1119,13 @@ main {
           font-size: $s_md;
           font-weight: $w_md;
         }
+
         .chartImg {
           grid-column: 1 / 11;
           grid-row: 4 / 10;
           align-self: end;
         }
+
         &:hover {
           .chartIcon {
             transition: $transition;
@@ -1122,7 +1135,7 @@ main {
 
         &:nth-child(1) {
           .chartIcon {
-            grid-column: 4 / 8 ;
+            grid-column: 4 / 8;
             grid-row: 7 / 10;
             align-self: end;
           }
@@ -1136,7 +1149,7 @@ main {
             justify-self: start;
           }
         }
-        
+
         &:nth-child(3) {
           .chartIcon {
             grid-column: 7 / 10;
@@ -1145,7 +1158,7 @@ main {
             justify-self: start;
           }
         }
-        
+
         &:nth-child(4) {
           .chartIcon {
             grid-column: 8 / 10;
@@ -1154,15 +1167,15 @@ main {
             justify-self: start;
           }
         }
-        
+
         &:nth-child(5) {
           .chartIcon {
-            grid-column: 4 / 8 ;
+            grid-column: 4 / 8;
             grid-row: 7 / 10;
             align-self: end;
           }
         }
-        
+
         &:nth-child(6) {
           .chartIcon_1 {
             grid-column: 3 / 6;
@@ -1170,11 +1183,13 @@ main {
             align-self: end;
             justify-self: end;
           }
+
           .chartIcon_2 {
             grid-column: 7 / 11;
             grid-row: 6 / 8;
             align-self: end;
           }
+
           .chartIcon_3 {
             grid-column: 4 / 7;
             grid-row: 8 / 10;
