@@ -47,9 +47,6 @@ $(window).on('scroll', (e) => {
   });
 
 
-/*===== slide btn */
-
-
 /*===== bookmark toggle btn */
 $(".category .youtuberList_container .youtuberList_wrapper .comparisonTarget_container ul li .icon").on("click", function(e) {
   $(e.currentTarget).children().attr("src", function(index, attr){
