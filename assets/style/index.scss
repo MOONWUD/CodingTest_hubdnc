@@ -378,21 +378,12 @@ main {
                 }
 
                 .icon {
-                  .activeNone {
-                    display: none;
-                  }
-
-                  .none {
-                    display: block;
-                  }
-
                   position: absolute;
                   right: -3px;
                   bottom: 22px;
                   width: 28px;
                   height: 28px;
                   border-radius: 50%;
-                  background-color: $skyblue;
                   display: grid;
                   place-items: center;
                 }
@@ -501,13 +492,9 @@ main {
         margin: 0 auto;
 
         .currentProfile_container {
-          &:hover {
-            .profileChange_wrapper {
-              display: flex;
-            }
-          }
-
+          position: relative;
           .currentProfile {
+            cursor: pointer;
             width: 120px;
             height: 134px;
             background-color: #F8F9FC;
@@ -587,6 +574,9 @@ main {
           }
 
           .profileChange_wrapper {
+            &.toggle {
+              display: flex;
+            }
             transition: $transition;
             position: absolute;
             z-index: 999;
@@ -748,6 +738,9 @@ main {
               }
 
               .icon {
+                &.toggle {
+                  background-color: $skyblue;
+                }
                 transition: $transition;
                 position: absolute;
                 right: -3px;
@@ -778,13 +771,6 @@ main {
                     width: 77px;
                     height: 87px;
                   }
-                }
-              }
-
-              &:nth-child(1),
-              &:nth-child(2) {
-                .icon {
-                  background-color: $skyblue;
                 }
               }
             }

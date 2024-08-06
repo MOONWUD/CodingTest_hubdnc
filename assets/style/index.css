@@ -359,15 +359,8 @@ main .category.active .youtuberList_container .youtuberList_wrapper .comparisonT
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background-color: #33C2D7;
   display: grid;
   place-items: center;
-}
-main .category.active .youtuberList_container .youtuberList_wrapper .comparisonTarget_container .comparisonTarget_wrapper .comparisonTarget_item .icon .activeNone {
-  display: none;
-}
-main .category.active .youtuberList_container .youtuberList_wrapper .comparisonTarget_container .comparisonTarget_wrapper .comparisonTarget_item .icon .none {
-  display: block;
 }
 main .category.active .youtuberList_container .youtuberList_wrapper .comparisonTarget_container .comparisonTarget_wrapper .comparisonTarget_item .name {
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -451,10 +444,11 @@ main .category .youtuberList_container .youtuberList_wrapper {
   align-items: center;
   margin: 0 auto;
 }
-main .category .youtuberList_container .youtuberList_wrapper .currentProfile_container:hover .profileChange_wrapper {
-  display: flex;
+main .category .youtuberList_container .youtuberList_wrapper .currentProfile_container {
+  position: relative;
 }
 main .category .youtuberList_container .youtuberList_wrapper .currentProfile_container .currentProfile {
+  cursor: pointer;
   width: 120px;
   height: 134px;
   background-color: #F8F9FC;
@@ -543,6 +537,9 @@ main .category .youtuberList_container .youtuberList_wrapper .currentProfile_con
   background-color: #fff;
   border: 1px solid #F6F6F6;
   box-shadow: 0 3px 10px rgba(68, 69, 71, 0.12);
+}
+main .category .youtuberList_container .youtuberList_wrapper .currentProfile_container .profileChange_wrapper.toggle {
+  display: flex;
 }
 main .category .youtuberList_container .youtuberList_wrapper .currentProfile_container .profileChange_wrapper .profileChange_item {
   cursor: pointer;
@@ -680,6 +677,9 @@ main .category .youtuberList_container .youtuberList_wrapper .comparisonTarget_c
   display: grid;
   place-items: center;
 }
+main .category .youtuberList_container .youtuberList_wrapper .comparisonTarget_container .comparisonTarget_wrapper .comparisonTarget_item .icon.toggle {
+  background-color: #33C2D7;
+}
 main .category .youtuberList_container .youtuberList_wrapper .comparisonTarget_container .comparisonTarget_wrapper .comparisonTarget_item .name {
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 14px;
@@ -695,9 +695,6 @@ main .category .youtuberList_container .youtuberList_wrapper .comparisonTarget_c
   content: "";
   width: 77px;
   height: 87px;
-}
-main .category .youtuberList_container .youtuberList_wrapper .comparisonTarget_container .comparisonTarget_wrapper .comparisonTarget_item:nth-child(1) .icon, main .category .youtuberList_container .youtuberList_wrapper .comparisonTarget_container .comparisonTarget_wrapper .comparisonTarget_item:nth-child(2) .icon {
-  background-color: #33C2D7;
 }
 main .category .youtuberList_container .youtuberList_wrapper .comparisonTarget_container .comparisonTarget_wrapper .comparisonTarget_item_last .profile {
   width: 80px;
