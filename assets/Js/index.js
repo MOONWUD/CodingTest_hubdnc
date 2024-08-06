@@ -5,6 +5,7 @@ $('nav .nav_wrapper li').on('click', (e) => {
  });
 
 
+
 /*========== category */
 /*===== scroll Event  */
 let scroll = 5;
@@ -16,6 +17,11 @@ $(window).on('scroll', (e) => {
     $('.category').removeClass('active');
   }
 })
+
+/*===== slide btn */
+
+
+
 
 
 /*========== competition */
@@ -35,8 +41,6 @@ $(window).on('scroll', (e) => {
    currentIdx = idx;
  })
 
- 
-/*========== comparison */
 
 
 /*========== popularVideo */
